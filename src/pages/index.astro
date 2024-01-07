@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+---
+
+<Layout title="Porfolio de Amador">
+	<main class="px-4">
+		<section class="my-24 w-full lg:w-[740px] mx-auto">
+			<img
+				class="size-20 rounded-full"
+				src="https://avatars.githubusercontent.com/u/122611230?v=4"
+				alt="Amador's avatar"
+			/>
+			<h1 class="text-white text-6xl font-bold my-5">
+				Hey, I'm <span class="text-gradient">Amador</span>
+				<Badge>
+					<a
+						href="https://www.linkedin.com/in/amadorsabido"
+						target="_blank"
+						rel="noopener"
+                        class="w-full h-full"
+					>
+						Open to Work
+					</a>
+				</Badge>
+			</h1>
+			<h2 class="text-xl text-pretty">
+				<span class="text-2xl text-gradient">Full Stack Java Developer</span
+				><br />
+				I am a passionate technology enthusiast, continuously acquiring new skills
+				and exploring the limitless opportunities offered by the digital world.
+				Experienced in multiple programming languages and frameworks, with a
+				strong focus on delivering high-quality, efficient code.
+			</h2>
+		</section>
+
+		<ul></ul>
+	</main>
+</Layout>
+
+<style>
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+</style>
