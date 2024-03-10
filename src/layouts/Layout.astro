@@ -1,15 +1,18 @@
 ---
 import "@fontsource-variable/onest";
-import Header from "../components/Header.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
 interface Props {
 	title: string;
+    description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -19,6 +22,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+        <!-- Background -->
 		<div
 			class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950
             bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
@@ -26,6 +30,7 @@ const { title } = Astro.props;
 		</div>
 		<Header />
 		<slot />
+        <Footer />
 	</body>
 </html>
 

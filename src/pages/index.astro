@@ -1,24 +1,26 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
+import Layout from "@/layouts/Layout.astro";
+import Badge from "@/components/Badge.astro";
 ---
 
-<Layout title="Porfolio de Amador">
+<Layout title="Porfolio de Amador" description="To do...">
 	<main class="px-4">
 		<section class="my-24 w-full lg:w-[740px] mx-auto">
 			<img
 				class="size-20 rounded-full"
-				src="https://avatars.githubusercontent.com/u/122611230?v=4"
+				src="/images/me.jpg"
 				alt="Amador's avatar"
 			/>
-			<h1 class="text-white text-6xl font-bold my-5">
+			<h1
+				class="text-white text-6xl font-bold my-5 flex flex-col md:flex-row gap-4"
+			>
 				Hey, I'm <span class="text-gradient">Amador</span>
 				<Badge>
 					<a
 						href="https://www.linkedin.com/in/amadorsabido"
 						target="_blank"
 						rel="noopener"
-                        class="w-full h-full"
+						class="w-full h-full"
 					>
 						Open to Work
 					</a>
@@ -34,7 +36,7 @@ import Badge from "../components/Badge.astro";
 			</h2>
 		</section>
 
-		<ul></ul>
+		<nav></nav>
 	</main>
 </Layout>
 
