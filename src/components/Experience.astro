@@ -1,0 +1,70 @@
+---
+const experience = [
+	{
+		date: "Mar 2023 - Jun 2023",
+		title: "Junior Java Developer",
+		company: "Viafirma",
+		description:
+			"Java Spring Framework (Spring Boot, Spring Security y Spring Data JPA/Hibernate). Habilidades en el manejo de bases de datos relacionales SQL como PostgreSQL y MySQL, así como en el diseño y desarrollo de servicios de API RESTful. Testing con JUnit y Mockito.",
+		latest: true,
+	},
+	{
+		date: "May 2019 - Mar 2021",
+		title: "Production Engineer",
+		company: "Saica Group",
+		description:
+			"Responsable  de proyecto de seguridad del Grupo Saica en España y Portugal. Procedimientos LOTO. Lean, 5S, análisis, tiempos de cambio, etc.). Supervisión del mantenimiento preventivo, evaluaciones de riesgos y gestión de no conformidades.",
+	},
+	{
+		date: "Feb 2018 - Jun 2018",
+		title: "Becario",
+		company: "IDENER",
+		description:
+			"Proyectos de aprendizaje automático utilizando Python como lenguaje de programación principal, entre otros",
+	},
+];
+
+import ExperienceItem from "@/components/ExperienceItem.astro";
+---
+
+<section class="container">
+	<ol class="relative mt-16">
+        {
+          experience.map((experiencie) => (
+            <li class="">
+              <ExperienceItem {...experiencie} />
+            </li>
+          ))
+        }
+      </ol>
+</section>
+
+<!-- This example requires Tailwind CSS v3.0+ 
+    <section>
+	<ol class="relative border-s dark:border-gray-700">
+		<li class="mb-10 ms-6">
+			<span
+				class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
+			>
+				<TimelineIcon />
+			</span>
+			<h3
+				class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+			>
+				Flowbite Application UI v2.0.0 <span
+					class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3"
+					>Latest</span
+				>
+			</h3>
+			<time
+				class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+				>Released on January 13th, 2022</time
+			>
+			<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+				Get access to over 20+ pages including a dashboard layout, charts,
+				kanban board, calendar, and pre-order E-commerce & Marketing pages.
+			</p>
+		</li>
+	</ol>
+</section>
+-->
