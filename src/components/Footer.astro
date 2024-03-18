@@ -1,17 +1,28 @@
 ---
 const currentYear = new Date().getFullYear();
 
-import email from '@/components/Hero.astro'
+import { userData } from "@/pages/index.astro";
 ---
 
-<footer class="text-center text-zinc-200/90 text-sm">
-	<div>
-		© {currentYear} Amador
+<footer class="rounded-lg shadow bg-gray-900/50 mx-auto mb-10 w-full lg:max-w-4xl">
+	<div
+		class="text-sm text-gray-500 py-4 px-8 sm:flex md:items-center sm:justify-between text-center"
+	>
+		<span class="">
+			© {currentYear} &bull; <a
+				href="/"
+				class="hover:underline cursor-pointer">Amador</a
+			>
+		</span>
+		<nav
+			class="flex flex-wrap justify-center items-center gap-x-5 mt-3 sm:mt-0"
+		>
+			<a href="#" class="hover:underline cursor-pointer">About Me</a>
+			<a
+				href={"mailto:" + userData.mail}
+				class="hover:underline cursor-pointer"
+				>Contact
+			</a>
+		</nav>
 	</div>
-    <div>
-        <ul>
-            <li>About Me</li>
-            <li><a href="">Contact</a></li>
-        </ul>
-    </div>
 </footer>
