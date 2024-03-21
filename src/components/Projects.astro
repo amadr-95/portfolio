@@ -1,0 +1,115 @@
+---
+import Java from "./icons/Java.astro";
+import GitHub from "./icons/GitHub.astro";
+import LinkButton from "./LinkButton.astro";
+
+const TAGS = {
+	JAVA: {
+		name: "Java",
+		class: "bg-yellow-300",
+		icon: Java,
+	},
+};
+
+const PROJECTS = [
+	{
+		title: "Library Management App",
+		description:
+			"This project allows users to perform various operations based on their role. Admins can conduct CRUD operations on books, while regular users and employees can search for and borrow books. Additionally, it includes an automatic email sender for users who have overdue books. Built from scratch using Java, Jakarta EE, JPA, MySQL, and Bootstrap.",
+		github: "https://github.com/amadr-95/library-management",
+		image: "/images/projects/library-project.webp",
+		tags: [TAGS.JAVA],
+	},
+	{
+		title: "Swagger API",
+		description:
+			"Leveraging the power of Swagger, this API offers comprehensive documentation and easy-to-use endpoints for user accounts. Whether you need to create, filter, update, or delete data, this API simplifies the process. Built using Java and Spring Boot, with a PostgreSQL database.",
+		github: "https://github.com/amadr-95/spring-jpa-postgres-swagger",
+		image: "/images/projects/swagger-project.webp",
+		tags: [TAGS.JAVA],
+	},
+];
+---
+
+<section class="my-10 md:my-20 lg:max-w-4xl mx-auto">
+	{
+		PROJECTS.map(({ image, title, description, tags, github }) => (
+			<article class="flex flex-col gap-y-8 md:flex-row md:gap-x-8 mb-16">
+				<div class="w-full md:w-1/2">
+					<img
+						alt={`Screenshot of project ${title}`}
+						class="rounded-xl"
+						loading="lazy"
+						src={image}
+					/>
+				</div>
+
+				<div class="w-full md:w-1/2 md:max-w-lg">
+					<h3 class="text-2xl font-bold text-gray-100">
+						{title}
+					</h3>
+					<div class="flex flex-wrap mt-2">
+						<ul class="flex flex-row mb-2 gap-x-2">
+							{tags.map((tag) => (
+								<li>
+									<span
+										class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+									>
+										<tag.icon class="size-4" />
+										{tag.name}
+									</span>
+								</li>
+							))}
+						</ul>
+
+						<p class="mt-2 text-gray-300 text-pretty">
+							{description}
+						</p>
+
+						<footer class="mt-4">
+							{github && (
+								<LinkButton href={github}>
+									<GitHub class="size-6" />
+									Code
+								</LinkButton>
+							)}
+						</footer>
+					</div>
+				</div>
+			</article>
+		))
+	}
+</section>
+
+<!-- <section class="my-10 md:my-20 lg:max-w-3xl mx-auto">
+	{
+		PROJECTS.map(({ title, description, image, tags }) => (
+			<article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+				<div class="w-full md:w-1/2">
+					<div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+						<img
+							alt={`Screenshot of project ${title}`}
+							loading="lazy"
+							src={image}
+							class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+						/>
+					</div>
+				</div>
+				<h3>{title}</h3>
+				<p>{description}</p>
+				<ul>
+					{tags.map((tag) => (
+						<li>
+							<span
+								class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+							>
+								<tag.icon class="size-5" />
+								{tag.name}
+							</span>
+						</li>
+					))}
+				</ul>
+			</article>
+		))
+	}
+</section> -->
