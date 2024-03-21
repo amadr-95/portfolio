@@ -12,50 +12,28 @@ const { date, title, company, description, latest } = Astro.props;
 import TimelineIcon from "@/components/icons/TimelineIcon.astro";
 ---
 
-<div
-  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
->
-  <div class="relative pb-12 md:col-span-2">
-    <div class="sticky top-0">
-      <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl"
-        >&bull;</span
-      >
-
-      <h3 class="text-xl font-bold text-yellow-400">{title}</h3>
-      <h4 class="font-semibold text-xl text-gray-600 dark:text-white">{company}</h4>
-      <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">{date}</time>
-    </div>
-  </div>
-  <div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
-    {description}
-  </div>
-</div>
-
-<!--<span
-	class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
+<span
+	class="absolute flex items-center justify-center size-6 rounded-full -start-3 ring-8 ring-gray-900 bg-blue-900 text-blue-300"
 >
 	<TimelineIcon />
 </span>
-<h3
-	class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
->
+<h3 class="flex items-center gap-x-4 mb-1 text-lg font-semibold text-white">
 	{title}
 	{
 		latest && (
-			<span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">
+			<span class="text-sm font-medium px-2.5 py-0.5 rounded bg-blue-900 text-blue-300">
 				Latest
 			</span>
 		)
 	}
 </h3>
 <time
-	class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+	class="block mb-2 text-sm font-normal leading-none text-gray-500"
 	>{date}</time
 >
-<p class="mb-2 text-base font-normal text-gray-500 dark:text-gray-400">
-    {company}
+<p class="mb-4 text-base font-normal text-gray-300">
+	{company}
 </p>
-<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+<p class="text-base font-normal text-gray-300">
 	{description}
 </p>
- -->
