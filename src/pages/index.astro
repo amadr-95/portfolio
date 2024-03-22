@@ -2,15 +2,19 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Hero from "@/components/Hero.astro";
+import Container from "@/components/Container.astro";
 import Experience from "@/components/Experience.astro";
 import Projects from "@/components/Projects.astro";
 import AboutMe from "@/components/AboutMe.astro";
 import Footer from "@/components/Footer.astro";
+import WorkIcon from "@/components/icons/WorkIcon.astro";
+import CodeIcon from "@/components/icons/CodeIcon.astro";
+import AboutMeIcon from "@/components/icons/AboutMeIcon.astro";
 
 export const userData = {
 	name: "Amador",
-    mail: "amasabcar@outlook.com",
-    github: "https://github.com/amadr-95",
+	mail: "amasabcar@outlook.com",
+	github: "https://github.com/amadr-95",
 	linkedin: "https://www.linkedin.com/in/amadorsabido",
 	rol: "Full Stack Java Developer",
 	description:
@@ -24,10 +28,38 @@ export const userData = {
 >
 	<main class="px-6 md:px-12">
 		<Header />
-		<Hero />
-        <Experience />
-		<Projects />
-		<AboutMe />
-		<Footer />
+		<Container>
+			<Hero />
+		</Container>
+		<Container>
+			<h2
+				class="flex items-center gap-x-4 text-3xl font-semibold mb-10 -ml-2"
+			>
+				<WorkIcon class="size-7" />
+				Work Experience
+			</h2>
+			<Experience />
+		</Container>
+		<Container>
+			<h2
+				class="flex items-center gap-x-4 text-3xl font-semibold mb-10 -ml-2"
+			>
+				<CodeIcon class="size-8" />
+				Projects
+			</h2>
+			<Projects />
+		</Container>
+		<Container>
+			<h2
+				class="flex items-center gap-x-4 text-3xl font-semibold mb-8 -ml-2"
+			>
+				<AboutMeIcon class="size-8" />
+				About Me
+			</h2>
+			<AboutMe />
+		</Container>
+		<Container>
+			<Footer />
+		</Container>
 	</main>
 </Layout>
