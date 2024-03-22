@@ -8,49 +8,45 @@ import GitHub from "@/components/icons/GitHub.astro";
 import Mail from "@/components/icons/Mail.astro";
 ---
 
-<section class="my-10 md:my-20 lg:max-w-3xl mx-auto">
-	<div class="flex gap-x-4">
-		<img
-			class="size-16 rounded-full"
-			src="/images/me.webp"
-			alt={userData.name}
-		/>
-		<a
-			href={userData.linkedin}
-			target="_blank"
-			rel="noopener"
-			class="flex items-center transition hover:scale-105"
-		>
-			<Badge>Open to Work</Badge>
-		</a>
-	</div>
-
-	<h1
-		class="text-5xl font-bold my-5 flex flex-col sm:flex-row gap-4"
+<div class="flex gap-x-4">
+	<img
+		class="size-16 rounded-full"
+		src="/images/me.webp"
+		alt={userData.name}
+	/>
+	<a
+		href={userData.linkedin}
+		target="_blank"
+		rel="noopener"
+		class="flex items-center transition hover:scale-105"
 	>
-		Hey, I'm <span class="text-gradient">{userData.name}</span>
-	</h1>
+		<Badge>Open to Work</Badge>
+	</a>
+</div>
 
-    <h2 class="flex flex-col gap-y-2 text-xl text-pretty mt-2 text-gray-300">
-        <span class="text-3xl text-gradient">{userData.rol}</span>
-		{userData.description}
-	</h2>
+<h1 class="text-5xl font-bold my-5 flex flex-col sm:flex-row gap-4">
+	Hey, I'm <span class="text-gradient">{userData.name}</span>
+</h1>
 
-	<nav class="flex flex-wrap gap-4 mt-7">
-        <SocialPill href={userData.linkedin}>
-            <Linkedin />
-            LinkedIn
-        </SocialPill>
-        <SocialPill href={userData.github}>
-            <GitHub />
-            GitHub
-        </SocialPill>
-        <SocialPill href={'mailto:' + userData.mail}>
-            <Mail />
-            Contact me
-        </SocialPill>
-    </nav>
-</section>
+<h2 class="flex flex-col gap-y-2 text-xl text-pretty mt-2 text-gray-300">
+	<span class="text-3xl text-gradient">{userData.rol}</span>
+	{userData.description}
+</h2>
+
+<nav class="flex flex-wrap gap-4 mt-7">
+	<SocialPill href={userData.linkedin}>
+		<Linkedin />
+		LinkedIn
+	</SocialPill>
+	<SocialPill href={userData.github}>
+		<GitHub />
+		GitHub
+	</SocialPill>
+	<SocialPill href={"mailto:" + userData.mail}>
+		<Mail />
+		Contact me
+	</SocialPill>
+</nav>
 
 <style>
 	.text-gradient {
