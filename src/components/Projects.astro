@@ -18,7 +18,7 @@ const PROJECTS = [
 			"This project allows users to perform various operations based on their role. Admins can conduct CRUD operations on books, while regular users and employees can search for and borrow books. Additionally, it includes an automatic email sender for users who have overdue books. Built from scratch using Java, Jakarta EE, JPA, MySQL, and Bootstrap.",
 		github: "https://github.com/amadr-95/library-management",
 		image: "/images/projects/library-project.webp",
-		tags: [TAGS.JAVA],
+		tags: [TAGS.JAVA, TAGS.JAVA],
 	},
 	{
 		title: "Swagger API",
@@ -46,18 +46,16 @@ const PROJECTS = [
 			<div class="w-full md:w-1/2 md:max-w-lg">
 				<h3 class="text-2xl font-bold text-gray-100">{title}</h3>
 				<div class="flex flex-wrap mt-2">
-					<ul class="flex flex-row mb-2 gap-x-2">
+					<nav class="flex flex-wrap gap-4 mt-2">
 						{tags.map((tag) => (
-							<li>
-								<span
-									class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
-								>
-									<tag.icon class="size-4" />
-									{tag.name}
-								</span>
-							</li>
+							<span
+								class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+							>
+								<tag.icon class="size-4" />
+								{tag.name}
+							</span>
 						))}
-					</ul>
+					</nav>
 
 					<p class="mt-2 text-gray-300 text-pretty">{description}</p>
 
