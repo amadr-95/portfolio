@@ -1,10 +1,23 @@
-<header class="fixed top-0 flex justify-center items-center py-5 w-full">
-	<nav class="flex flex-row gap-x-4 sm:gap-x-10">
-		<a href="#experience">Experience</a>
-		<a href="#projects">Projects</a>
-		<a href="#about-me">About me</a>
+---
+const navItems = [
+	{ href: "#experience", text: "Experience" },
+	{ href: "#projects", text: "Projects" },
+	{ href: "#about-me", text: "About me" },
+];
+---
+
+<header class="fixed top-0 flex justify-center w-full z-10 mt-2">
+	<nav class="flex gap-x-4 md:gap-x-6 px-5 text-sm rounded-full">
+		{
+			navItems.map(({ href, text }) => (
+				<a class="py-2 transition hover:text-gray-300" href={href}>
+					{text}
+				</a>
+			))
+		}
 	</nav>
 </header>
+
 
 <style>
 	nav {
@@ -19,3 +32,4 @@
 		}
 	}
 </style>
+
