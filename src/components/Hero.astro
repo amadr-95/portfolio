@@ -6,6 +6,7 @@ import SocialPill from "@/components/SocialPill.astro";
 import Linkedin from "@/components/icons/Linkedin.astro";
 import GitHub from "@/components/icons/GitHub.astro";
 import Mail from "@/components/icons/Mail.astro";
+import DownloadIcon from "@/components/icons/DownloadIcon.astro";
 ---
 
 <div class="max-w-2xl text-white">
@@ -43,10 +44,14 @@ import Mail from "@/components/icons/Mail.astro";
 			<GitHub />
 			GitHub
 		</SocialPill>
-		<SocialPill href={"mailto:" + userData.mail}>
+		<SocialPill href={`mailto:${userData.mail}`}>
 			<Mail />
 			Contact me
 		</SocialPill>
+        <SocialPill href="/documents/resume.pdf" download={`CV_${userData.name}`}>
+            <DownloadIcon class="size-5" />
+            Download CV
+        </SocialPill>
 	</nav>
 </div>
 
