@@ -1,11 +1,11 @@
 ---
-import BootstrapIcon from "./icons/BootstrapIcon.astro";
-import GitHub from "./icons/GitHub.astro";
-import Java from "./icons/Java.astro";
-import LinkButton from "./LinkButton.astro";
-import MySQLIcon from "./icons/MySQLIcon.astro";
-import PostgreIcon from "./icons/PostgreIcon.astro";
-import Spring from "./icons/SpringIcon.astro";
+import BootstrapIcon from "@/components/icons/BootstrapIcon.astro";
+import GitHub from "@/components/icons/GitHub.astro";
+import Java from "@/components/icons/Java.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import MySQLIcon from "@/components/icons/MySQLIcon.astro";
+import PostgreIcon from "@/components/icons/PostgreIcon.astro";
+import Spring from "@/components/icons/SpringIcon.astro";
 
 const TAGS = {
 	JAVA: {
@@ -96,36 +96,3 @@ const PROJECTS = [
 		</article>
 	))
 }
-
-<!-- <section class="my-10 md:my-20 lg:max-w-3xl mx-auto">
-	{
-		PROJECTS.map(({ title, description, image, tags }) => (
-			<article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-				<div class="w-full md:w-1/2">
-					<div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-						<img
-							alt={`Screenshot of project ${title}`}
-							loading="lazy"
-							src={image}
-							class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-						/>
-					</div>
-				</div>
-				<h3>{title}</h3>
-				<p>{description}</p>
-				<ul>
-					{tags.map((tag) => (
-						<li>
-							<span
-								class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
-							>
-								<tag.icon class="size-5" />
-								{tag.name}
-							</span>
-						</li>
-					))}
-				</ul>
-			</article>
-		))
-	}
-</section> -->
