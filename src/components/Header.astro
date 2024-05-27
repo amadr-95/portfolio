@@ -1,21 +1,40 @@
 ---
-const navItems = [
-	{ href: "#experience", text: "Experience" },
-	{ href: "#projects", text: "Projects" },
-	{ href: "#about-me", text: "About me" },
-];
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { ui } from "@/i18n/ui";
+import Picker from "@/components/Picker.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const translate = useTranslations(lang);
+
+type NavKey = "nav.experience" | "nav.projects" | "nav.about-me";
+
+const navItems: { href: string; key: NavKey }[] = Object.keys(ui[lang])
+	.filter((key): key is NavKey => key.startsWith("nav."))
+	.map((key) => {
+		return { href: `#${key.split(".")[1]}`, key };
+	});
+
+//const navItems = [
+//    { href: "#experience", key: "Experience" },
+//    { href: "#projects", key: "Projects" },
+//    { href: "#about-me", key: "About me" },
+//];
 ---
 
-<header class="fixed top-0 flex justify-center w-full z-10 mt-2">
+<header class="fixed top-0 flex justify-center items-center gap-x-4 w-full z-10 mt-2">
 	<nav class="flex gap-x-4 md:gap-x-6 px-5 text-sm rounded-full">
 		{
-			navItems.map(({ href, text }) => (
-				<a class="py-2 transition text-white hover:text-yellow-100" href={href}>
-					{text}
+			navItems.map(({ href, key }) => (
+				<a
+					class="py-2 transition text-white hover:text-yellow-100"
+					href={href}
+				>
+					{translate(key)}
 				</a>
 			))
 		}
 	</nav>
+    <Picker />
 </header>
 
 <style>
