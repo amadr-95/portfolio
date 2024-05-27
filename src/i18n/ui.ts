@@ -75,7 +75,7 @@ export const ui = {
 					"API that offers comprehensive documentation and easy-to-use endpoints for user accounts. Built for educational purposes using Java and Spring Boot, with a PostgreSQL database.",
 				github: "https://github.com/amadr-95/swagger-account-api",
 				image: "/images/projects/swagger-project.webp",
-				tags: ["JAVA", "SPRING", "POSTGRESQL"],
+				tags: ["JAVA", "SPRING", "POSTGRE"],
 			},
 		],
 		"about.bio": `<p>
@@ -158,7 +158,7 @@ export const ui = {
 					"API que ofrece documentación completa y endpoints fáciles de usar para cuentas de usuario. Desarrollada con fines educativos utilizando Java y Spring Boot, con una base de datos PostgreSQL.",
 				github: "https://github.com/amadr-95/swagger-account-api",
 				image: "/images/projects/swagger-project.webp",
-				tags: ["JAVA", "SPRING", "POSTGRESQL"],
+				tags: ["JAVA", "SPRING", "POSTGRE"],
 			},
 		],
 		"about.bio": `<p>
@@ -241,7 +241,7 @@ export const ui = {
 					"API, die umfassende Dokumentation und benutzerfreundliche Endpunkte für Benutzerkonten bietet. Zu Bildungszwecken entwickelt mit Java und Spring Boot sowie einer PostgreSQL-Datenbank.",
 				github: "https://github.com/amadr-95/swagger-account-api",
 				image: "/images/projects/swagger-project.webp",
-				tags: ["JAVA", "SPRING", "POSTGRESQL"],
+				tags: ["JAVA", "SPRING", "POSTGRE"],
 			},
 		],
 		"about.bio": `<p>
