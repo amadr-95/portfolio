@@ -59,6 +59,7 @@ export const ui = {
 					"Machine learning projects using Python as main programming language, among others.",
 			},
 		],
+        "exp.latest": "Latest",
 		projects: [
 			{
 				title: "Library - Books management system",
@@ -141,6 +142,7 @@ export const ui = {
 					"Proyectos de aprendizaje automático utilizando Python como lenguaje de programación principal, entre otros.",
 			},
 		],
+        "exp.latest": "Más reciente",
 		projects: [
 			{
 				title: "Library - Sistema de gestión para libros",
@@ -169,7 +171,7 @@ export const ui = {
                 Entre mis éxitos, destaco que durante mis estudios de Grado Superior, 
                 ayudé a mis compañeros a aprender sobre el <strong>
                 Framework Spring de Java</strong
-            >. Me encanta hacer pruebas, creo en su importancia y disfruto compartiendo 
+            >. Me encanta el testing, creo en su importancia y disfruto compartiendo 
             mi conocimiento al respecto.
             </p>
             <p>
@@ -223,6 +225,7 @@ export const ui = {
 					"Maschinelles Lernen Projekte mit Python als Hauptprogrammiersprache, unter anderem.",
 			},
 		],
+        "exp.latest": "Neueste",
 		projects: [
 			{
 				title: "Bibliothek - Buchverwaltungssystem",

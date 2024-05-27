@@ -1,4 +1,7 @@
 ---
+import TimelineIcon from "@/components/icons/TimelineIcon.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
 interface Props {
 	date: string;
 	title: string;
@@ -7,9 +10,10 @@ interface Props {
 	latest?: boolean;
 }
 
-const { date, title, company, description, latest } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
-import TimelineIcon from "@/components/icons/TimelineIcon.astro";
+const { date, title, company, description, latest } = Astro.props;
 ---
 
 <span
@@ -22,7 +26,7 @@ import TimelineIcon from "@/components/icons/TimelineIcon.astro";
 	{
 		latest && (
 			<span class="text-sm font-medium px-2.5 py-0.5 rounded bg-blue-900 text-blue-300">
-				Latest
+				{t('exp.latest')}
 			</span>
 		)
 	}
