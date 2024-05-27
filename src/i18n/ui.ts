@@ -142,7 +142,7 @@ export const ui = {
 					"Proyectos de aprendizaje automático utilizando Python como lenguaje de programación principal, entre otros.",
 			},
 		],
-        "exp.latest": "Más reciente",
+        "exp.latest": "Último",
 		projects: [
 			{
 				title: "Library - Sistema de gestión para libros",
