@@ -1,6 +1,6 @@
 ---
 import Spain from "@/components/icons/flags/Spain.astro";
-import UnitedStates from "@/components/icons/flags/UnitedStates.astro";
+import UnitedKingdom from "@/components/icons/flags/UnitedKingdom.astro";
 import Germany from "@/components/icons/flags/Germany.astro";
 import ArrowIcon from "@/components/icons/ArrowPicker.astro";
 import { languages } from "@/i18n/ui";
@@ -13,7 +13,7 @@ const translatePath = useTranslatedPath(lang);
 const getFlagComponent = (code: string) => {
   switch (code) {
     case 'en':
-      return UnitedStates;
+      return UnitedKingdom;
     case 'es':
       return Spain;
     case 'de':
