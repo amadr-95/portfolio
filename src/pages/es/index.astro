@@ -1,0 +1,58 @@
+---
+import AboutMe from "@/components/AboutMe.astro";
+import AboutMeIcon from "@/components/icons/AboutMeIcon.astro";
+import CodeIcon from "@/components/icons/CodeIcon.astro";
+import Container from "@/components/Container.astro";
+import Experience from "@/components/Experience.astro";
+import Hero from "@/components/Hero.astro";
+import Footer from "@/components/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+import Projects from "@/components/Projects.astro";
+import WorkIcon from "@/components/icons/WorkIcon.astro";
+import TitleSection from "@/components/TitleSection.astro";
+
+export const userData = {
+	name: "Amador",
+	mail: "amasabcar@outlook.com",
+	github: "https://github.com/amadr-95",
+	linkedin: "https://www.linkedin.com/in/amadorsabido",
+	rol: "Full Stack Java Developer",
+	description:
+		"Experienced in multiple programming languages and frameworks, with a strong focus on delivering high-quality, efficient code.",
+};
+---
+
+<Layout
+	title="Amador's Portfolio - Full Stack Java Developer"
+	description={userData.description}
+>
+	<main class="px-6 md:px-12">
+		<Container>
+			<Hero />
+		</Container>
+		<Container id="experience">
+			<TitleSection>
+				<WorkIcon class="size-8" />
+				Work Experience
+			</TitleSection>
+			<Experience />
+		</Container>
+		<Container id="projects">
+			<TitleSection>
+				<CodeIcon class="size-8" />
+				Projects
+			</TitleSection>
+			<Projects />
+		</Container>
+		<Container id="about-me">
+			<TitleSection>
+				<AboutMeIcon class="size-8" />
+				About Me
+			</TitleSection>
+			<AboutMe />
+		</Container>
+        <Container>
+            <Footer />
+        </Container>
+	</main>
+</Layout>
