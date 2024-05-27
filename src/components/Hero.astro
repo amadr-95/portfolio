@@ -11,6 +11,8 @@ import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+console.log(lang);
 ---
 
 <div class="max-w-2xl text-white">
@@ -26,17 +28,18 @@ const t = useTranslations(lang);
 			rel="noopener"
 			class="flex items-center transition hover:scale-105"
 		>
-			<Badge>{t('hero.badge')}</Badge>
+			<Badge>{t("hero.badge")}</Badge>
 		</a>
 	</div>
 
 	<h1 class="text-5xl font-bold my-5 flex flex-col sm:flex-row gap-4">
-		{t('hero.greet')} <span class="text-gradient">{userData.name}</span>
+		{t("hero.greet")}
+		<span class="text-gradient">{userData.name}</span>
 	</h1>
 
 	<h2 class="flex flex-col gap-y-2 text-xl text-pretty mt-2 text-gray-300">
-		<span class="text-3xl text-gradient">{t('hero.rol')}</span>
-		{t('hero.description')}
+		<span class="text-3xl text-gradient">{t("hero.rol")}</span>
+		{t("hero.description")}
 	</h2>
 
 	<nav class="flex flex-wrap gap-4 mt-7">
@@ -50,12 +53,17 @@ const t = useTranslations(lang);
 		</SocialPill>
 		<SocialPill href={`mailto:${userData.mail}`}>
 			<Mail />
-			{t('hero.contact')}
+			{t("hero.contact")}
 		</SocialPill>
-        <SocialPill href="/documents/resume.pdf" download={`CV_${userData.name}`}>
-            <DownloadIcon class="size-5" />
-            {t('hero.resume')}
-        </SocialPill>
+		<SocialPill
+			href={lang === "en" || lang === "de"
+				? "/documents/resume_en.pdf"
+				: "/documents/resume_es.pdf"}
+			download={`CV_${lang === "de" ? "en" : lang}_${userData.name}`}
+		>
+			<DownloadIcon class="size-5" />
+			{t("hero.resume")}
+		</SocialPill>
 	</nav>
 </div>
 
