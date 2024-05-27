@@ -1,6 +1,6 @@
 # My Portfolio
 
-![image](https://github.com/amadr-95/portfolio/assets/122611230/c238b8fc-d0ee-4740-a73d-14af8158754e)
+![image](https://github.com/amadr-95/portfolio/assets/122611230/06320229-0244-4a7d-84ca-7ae24ccb8115)
 
 Based on <a href="https://github.com/midudev/porfolio.dev">midudev</a> portfolio 
 
