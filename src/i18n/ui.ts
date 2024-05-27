@@ -26,7 +26,7 @@ export const ui = {
 	es: {
 		"nav.experience": "Experiencia",
 		"nav.projects": "Proyectos",
-		"nav.about-me": "Sobre Mi",
+		"nav.about-me": "Sobre",
 	},
 	de: {
 		"nav.experience": "Erfahrung",
