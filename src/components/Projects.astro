@@ -6,8 +6,22 @@ import LinkButton from "@/components/LinkButton.astro";
 import MySQLIcon from "@/components/icons/MySQLIcon.astro";
 import PostgreIcon from "@/components/icons/PostgreIcon.astro";
 import Spring from "@/components/icons/SpringIcon.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
-const TAGS = {
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+type TagType = {
+	name: string;
+	class: string;
+	icon: (_props: Record<string, any>) => any;
+};
+
+type TagsType = {
+	[key: string]: TagType;
+};
+
+const TAGS: TagsType = {
 	JAVA: {
 		name: "Java",
 		class: "bg-gray-300 text-gray-900",
@@ -35,24 +49,15 @@ const TAGS = {
 	},
 };
 
-const PROJECTS = [
-	{
-		title: "Library - A management system for books",
-		description:
-			"Users can perform different actions based on their role, from CRUD operations on books to search for and borrow them. It also includes an automatic email sender for users who have overdue books. Built from scratch using Java, Jakarta EE, JPA, MySQL and Bootstrap.",
-		github: "https://github.com/amadr-95/library-app",
-		image: "/images/projects/library-project.webp",
-		tags: [TAGS.JAVA, TAGS.MYSQL, TAGS.BOOTSTRAP],
-	},
-	{
-		title: "Swagger API - User accounts",
-		description:
-			"API that offers comprehensive documentation and easy-to-use endpoints for user accounts. Built for educational purposes using Java and Spring Boot, with a PostgreSQL database.",
-		github: "https://github.com/amadr-95/swagger-account-api",
-		image: "/images/projects/swagger-project.webp",
-		tags: [TAGS.JAVA, TAGS.SPRING, TAGS.POSTGRE],
-	},
-];
+interface ProjectType {
+	title: string;
+	description: string;
+	github: string;
+	image: string;
+	tags: string[];
+}
+
+const PROJECTS: ProjectType[] = t("projects");
 ---
 
 {
@@ -71,14 +76,19 @@ const PROJECTS = [
 				<h3 class="text-2xl font-bold text-gray-100">{title}</h3>
 				<div class="flex flex-wrap mt-2">
 					<nav class="flex flex-wrap gap-3 mt-2">
-						{tags.map((tag) => (
-							<span
-								class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
-							>
-								<tag.icon class="size-4" />
-								{tag.name}
-							</span>
-						))}
+						{tags.map((item) => {
+							const tag = TAGS[item];
+							if (tag) {
+								return (
+									<span
+										class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+									>
+										<tag.icon class="size-4" />
+										{tag.name}
+									</span>
+								);
+							}
+						})}
 					</nav>
 
 					<p class="mt-2 text-gray-300 text-pretty">{description}</p>

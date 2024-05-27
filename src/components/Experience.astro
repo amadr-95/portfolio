@@ -1,30 +1,20 @@
 ---
-const EXPERIENCE = [
-	{
-		date: "March 2023 - July 2023",
-		title: "Java Developer",
-		company: "Viafirma",
-		description:
-			"Design and develop RESTFul API services using Java Spring Framework (Spring Boot, Spring Security, Spring Data JPA/Hibernate). Skills in handling SQL relational databases like PostgreSQL and MySQL, as well as using Git and GitHub. Testing with JUnit and Mockito.",
-		latest: true,
-	},
-	{
-		date: "May 2019 - March 2021",
-		title: "Production Engineer",
-		company: "Saica Group",
-		description:
-			"Responsible for the Saica Group security project in Spain and Portugal. LOTO procedures. Lean, 5S, analysis, changeover times, etc. Supervision of preventive maintenance, risk assessments, and non-conformity management.",
-	},
-	{
-		date: "February 2018 - June 2018",
-		title: "Intern Engineer",
-		company: "Idener",
-		description:
-			"Machine learning projects using Python as main programming language, among others.",
-	},
-];
-
 import ExperienceItem from "@/components/ExperienceItem.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+type Experience = {
+    date: string;
+    title: string;
+    company: string;
+    description: string;
+    latest?: boolean;
+};
+
+const EXPERIENCE: Experience[] = t('exp');
+
 ---
 
 <ol class="start-1 relative border-s border-gray-700">

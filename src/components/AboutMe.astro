@@ -1,38 +1,17 @@
 ---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { userData } from "@/pages/index.astro";
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <article
 	class="flex flex-col items-center justify-center gap-8 text-gray-300 md:flex-row"
 >
-	<div class="text-pretty order-2 md:order-1">
-		<p class="mb-4">
-			My name is Amador, I studied Robotic Engineering and worked for 2
-			years as a production engineer. I decided I wanted a change and
-			transitioned to the programming world. <strong
-				class="text-yellow-100 font-mono"
-			>
-				It has been one of my best decisions</strong
-			>.
-		</p>
-
-		<p class="mb-4">
-			Among my successes, I highlight that during my Higher Degree studies, I
-			helped my classmates learn about <strong
-				class="text-yellow-100 font-mono"
-			>
-				Java's Spring Framework</strong
-			>. I love testing, believe in its importance, and enjoy sharing my
-			knowledge about it.
-		</p>
-
-		<p class="mb-4">
-			I stay up to date in the development community. In my spare time I
-			enjoy working out, playing boardgames and learning new programming
-			languages; <strong class="text-yellow-100 font-mono">
-				because besides being my job, I consider it as a hobby</strong
-			>.
-		</p>
+	<div class="[&>p]:mb-4 [&>p>strong]:text-yellow-100 [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+        set:html={t('about.bio')}>
 	</div>
 
 	<img
