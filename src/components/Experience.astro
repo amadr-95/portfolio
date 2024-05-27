@@ -2,8 +2,11 @@
 import ExperienceItem from "@/components/ExperienceItem.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
+
+type tLang = (str: any) => any;
+
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const t:tLang = useTranslations(lang);
 
 type Experience = {
     date: string;
