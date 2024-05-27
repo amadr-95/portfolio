@@ -1,7 +1,7 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { ui } from "@/i18n/ui";
-import Picker from "@/components/Picker.astro";
+import Picker from "@/components/LanguagePicker.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const translate = useTranslations(lang);
