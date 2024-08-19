@@ -19,17 +19,17 @@ export const showDefaultLang = false;
 
 export const ui = {
 	en: {
-		"layout.title": "Amador's Portfolio - Full Stack Java Developer",
+		"layout.title": "Amador's Portfolio - Software Engineer",
 		"layout.description":
-			"Software developer experienced in multiple programming languages and frameworks, with a strong focus on delivering high-quality, efficient code.",
+			"Software engineer experienced in multiple programming languages and frameworks, with a strong focus on delivering high-quality, efficient code.",
 		"navbar.experience": "Experience",
 		"navbar.projects": "Projects",
 		"navbar.about-me": "About me",
-		"hero.badge": "Open to Work",
+		"hero.badge": "Working at Zalando",
 		"hero.greet": "Hey, I'm",
-		"hero.rol": "Full Stack Java Developer",
+		"hero.rol": "Software Engineer",
 		"hero.description":
-			"Software developer experienced in multiple programming languages and frameworks, with a strong focus on delivering high-quality, efficient code.",
+			"Software engineer experienced in multiple programming languages and frameworks, with a strong focus on delivering high-quality, efficient code.",
 		"hero.contact": "Contact me",
 		"hero.resume": "Download CV",
 		"index.experience": "Work Experience",
@@ -37,12 +37,19 @@ export const ui = {
 		"index.about": "About me",
 		exp: [
 			{
+				date: "August 2024 - Present",
+				title: "Software Engineer",
+				company: "Zalando",
+				description:
+					"Develop, test and secure card payment transactions in the Zalando platform. Working with Java, Spring Boot, AWS, and Kubernetes.",
+				latest: true,
+			},
+			{
 				date: "March 2023 - July 2023",
 				title: "Java Developer",
 				company: "Viafirma",
 				description:
 					"Design and develop RESTFul API services using Java Spring Framework (Spring Boot, Spring Security, Spring Data JPA/Hibernate). Skills in handling SQL relational databases like PostgreSQL and MySQL, as well as using Git and GitHub. Testing with JUnit and Mockito.",
-				latest: true,
 			},
 			{
 				date: "May 2019 - March 2021",
@@ -59,7 +66,7 @@ export const ui = {
 					"Machine learning projects using Python as main programming language, among others.",
 			},
 		],
-        "exp.latest": "Latest",
+		"exp.latest": "Latest",
 		projects: [
 			{
 				title: "Library - Books management system",
@@ -102,17 +109,17 @@ export const ui = {
 		"footer.contact": "Contact",
 	},
 	es: {
-		"layout.title": "Portfolio de Amador - Full Stack Java Developer",
+		"layout.title": "Portfolio de Amador - Ingeniero de Software",
 		"layout.description":
-			"Desarrollador de software con experiencia en múltiples lenguajes de programación y frameworks, con un fuerte enfoque en el desarrollo de código eficiente y de calidad.",
+			"Ingeniero de software con experiencia en múltiples lenguajes de programación y frameworks, con un fuerte enfoque en el desarrollo de código eficiente y de calidad.",
 		"navbar.experience": "Experiencia",
 		"navbar.projects": "Proyectos",
 		"navbar.about-me": "Sobre",
-		"hero.badge": "Disponible para trabajar",
+		"hero.badge": "Trabajando en Zalando",
 		"hero.greet": "Hey, soy",
-		"hero.rol": "Full Stack Java Developer",
+		"hero.rol": "Ingeniero de Software",
 		"hero.description":
-			"Desarrollador de software con experiencia en múltiples lenguajes de programación y frameworks, con un fuerte enfoque en el desarrollo de código eficiente y de calidad.",
+			"Ingeniero de software con experiencia en múltiples lenguajes de programación y frameworks, con un fuerte enfoque en el desarrollo de código eficiente y de calidad.",
 		"hero.contact": "Contáctame",
 		"hero.resume": "Descargar CV",
 		"index.experience": "Experiencia",
@@ -120,12 +127,19 @@ export const ui = {
 		"index.about": "Sobre mí",
 		exp: [
 			{
+				date: "Agosto 2024 - Presente",
+				title: "Ingeniero de Software",
+				company: "Zalando",
+				description:
+					"Desarrollar, testear y asegurar las transacciones de pago con tarjeta en la plataforma Zalando. Trabajando con Java, Spring Boot, AWS y Kubernetes.",
+				latest: true,
+			},
+			{
 				date: "Marzo 2023 - Julio 2023",
 				title: "Desarrollador Java",
 				company: "Viafirma",
 				description:
 					"Diseño y desarrollo de servicios de API RESTful utilizando el Framework Java Spring (Spring Boot, Spring Security, Spring Data JPA/Hibernate). Habilidades en el manejo de bases de datos relacionales SQL como PostgreSQL y MySQL, así como el uso de Git y GitHub. Pruebas con JUnit y Mockito.",
-				latest: true,
 			},
 			{
 				date: "Mayo 2019 - Marzo 2021",
@@ -142,7 +156,7 @@ export const ui = {
 					"Proyectos de aprendizaje automático utilizando Python como lenguaje de programación principal, entre otros.",
 			},
 		],
-        "exp.latest": "Último",
+		"exp.latest": "Último",
 		projects: [
 			{
 				title: "Library - Sistema de gestión para libros",
@@ -185,30 +199,37 @@ export const ui = {
 		"footer.contact": "Contáctame",
 	},
 	de: {
-		"layout.title": "Amadors Portfolio - Full Stack Java Entwickler",
+		"layout.title": "Amadors Portfolio - Software-Ingenieur",
 		"layout.description":
-			"Softwareentwickler mit Erfahrung in mehreren Programmiersprachen und Frameworks, mit starkem Fokus auf die Bereitstellung von hochwertigem und effizientem Code.",
+			"Software-Ingenieur mit Erfahrung in mehreren Programmiersprachen und Frameworks, mit starkem Fokus auf die Bereitstellung von hochwertigem und effizientem Code.",
 		"navbar.experience": "Erfahrung",
 		"navbar.projects": "Projekte",
 		"navbar.about-me": "Über mich",
-		"hero.badge": "Bereit zu arbeiten",
+		"hero.badge": "Arbeitet bei Zalando",
 		"hero.greet": "Hey, ich bin",
-		"hero.rol": "Full Stack Java Entwickler",
+		"hero.rol": "Software-Ingenieur",
 		"hero.description":
-			"Softwareentwickler mit Erfahrung in mehreren Programmiersprachen und Frameworks, mit starkem Fokus auf die Bereitstellung von hochwertigem und effizientem Code.",
+			"Software-Ingenieur mit Erfahrung in mehreren Programmiersprachen und Frameworks, mit starkem Fokus auf die Bereitstellung von hochwertigem und effizientem Code.",
 		"hero.contact": "Kontaktiere mich",
-		"hero.resume": "Lebenslauf herunterladen",
+		"hero.resume": "CV herunterladen",
 		"index.experience": "Berufserfahrung",
 		"index.projects": "Projekte",
 		"index.about": "Über mich",
 		exp: [
+			{
+				date: "August 2024 - Heute",
+				title: "Software-Ingenieur",
+				company: "Zalando",
+				description:
+					"Entwickeln, testen und sichern Sie Kartenzahlungstransaktionen auf der Zalando-Plattform. Arbeiten mit Java, Spring Boot, AWS und Kubernetes.",
+				latest: true,
+			},
 			{
 				date: "März 2023 - Juli 2023",
 				title: "Java Entwickler",
 				company: "Viafirma",
 				description:
 					"Entwurf und Entwicklung von RESTFul API-Diensten mit dem Java Spring Framework (Spring Boot, Spring Security, Spring Data JPA/Hibernate). Kenntnisse im Umgang mit relationalen SQL-Datenbanken wie PostgreSQL und MySQL sowie der Verwendung von Git und GitHub. Tests mit JUnit und Mockito.",
-				latest: true,
 			},
 			{
 				date: "Mai 2019 - März 2021",
@@ -225,7 +246,7 @@ export const ui = {
 					"Maschinelles Lernen Projekte mit Python als Hauptprogrammiersprache, unter anderem.",
 			},
 		],
-        "exp.latest": "Neueste",
+		"exp.latest": "Neueste",
 		projects: [
 			{
 				title: "Bibliothek - Buchverwaltungssystem",
