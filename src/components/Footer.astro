@@ -2,7 +2,7 @@
 const currentYear = new Date().getFullYear();
 
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import { userData } from "@/pages/index.astro";
+import { userData } from "@/data/userData.ts";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
