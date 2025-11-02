@@ -9,7 +9,7 @@ import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 
-// Asignar manualmente las banderas a los idiomas
+// Manually assign the flags to the languages
 const getFlagComponent = (code: string) => {
   switch (code) {
     case 'en':
@@ -23,13 +23,13 @@ const getFlagComponent = (code: string) => {
   }
 };
 
-// Obtener los datos del idioma actual y asignar la bandera
+// Get current language data and assign the flag
 const currentLocaleData = {
   ...languages[lang],
   flag: getFlagComponent(lang)
 };
 
-// Obtener los otros idiomas y asignar manualmente las banderas
+// Get the other languages and manually assign the flags
 const otherLocales = Object.values(languages)
   .filter((locale) => locale.code !== lang)
   .map((locale) => {

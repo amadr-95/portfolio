@@ -12,14 +12,6 @@ import WorkIcon from "@/components/icons/WorkIcon.astro";
 import TitleSection from "@/components/TitleSection.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
-
-export const userData = {
-	name: "Amador",
-	mail: "amasabcar@outlook.com",
-	github: "https://github.com/amadr-95",
-	linkedin: "https://www.linkedin.com/in/amadorsabido",
-};
-
 type tLang = (str: any) => any;
 
 const lang = getLangFromUrl(Astro.url);

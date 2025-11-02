@@ -1,5 +1,5 @@
 ---
-import { userData } from "@/pages/index.astro";
+import { userData } from "@/data/userData";
 
 import Badge from "@/components/Badge.astro";
 import SocialPill from "@/components/SocialPill.astro";
@@ -12,7 +12,6 @@ import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-console.log(lang);
 ---
 
 <div class="max-w-2xl text-white">
@@ -73,6 +72,6 @@ console.log(lang);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 350%;
-		background-position: 0%;
+		background-position: 0;
 	}
 </style>
