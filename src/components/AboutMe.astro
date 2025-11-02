@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { userData } from "@/data/userData";
 
@@ -13,11 +14,9 @@ const t = useTranslations(lang);
 	<div class="[&>p]:mb-4 [&>p>strong]:text-blue-300 [&>p>strong]:font-mono text-pretty order-2 md:order-1"
         set:html={t('about.bio')}>
 	</div>
-
-	<img
-		width="200"
-		height="200"
-		loading="lazy"
+	<Image
+		width={200}
+		height={200}
 		src="/images/me-professional.webp"
 		alt={userData.name}
 		class="order-1 object-cover md:w-64 md:h-full p-1 md:order-2 rotate-3 lg:w-64 aspect-auto rounded-2xl ring-2 ring-white/20"

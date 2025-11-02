@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import BootstrapIcon from "@/components/icons/BootstrapIcon.astro";
 import GitHub from "@/components/icons/GitHub.astro";
 import Java from "@/components/icons/Java.astro";
@@ -66,10 +67,11 @@ const PROJECTS: ProjectType[] = t("projects");
 	PROJECTS.map(({ image, title, description, tags, github }) => (
 		<article class="flex flex-col gap-y-8 md:flex-row md:gap-x-8 mb-16">
 			<div class="w-full md:w-1/2">
-				<img
+				<Image
 					alt={`Screenshot of project ${title}`}
 					class="rounded-xl transition duration-500 lg:hover:scale-95"
-					loading="lazy"
+					width={800}
+					height={600}
 					src={image}
 				/>
 			</div>
