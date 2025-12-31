@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import BootstrapIcon from "@/components/icons/BootstrapIcon.astro";
 import GitHub from "@/components/icons/GitHub.astro";
+import Link from "@/components/icons/Link.astro";
 import Java from "@/components/icons/Java.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import MySQLIcon from "@/components/icons/MySQLIcon.astro";
@@ -56,6 +57,7 @@ interface ProjectType {
 	title: string;
 	description: string;
 	github: string;
+	link: string;
 	image: string;
 	tags: string[];
 }
@@ -64,7 +66,7 @@ const PROJECTS: ProjectType[] = t("projects");
 ---
 
 {
-	PROJECTS.map(({ image, title, description, tags, github }) => (
+	PROJECTS.map(({ image, title, description, tags, github , link}) => (
 		<article class="flex flex-col gap-y-8 md:flex-row md:gap-x-8 mb-16">
 			<div class="w-full md:w-1/2">
 				<Image
@@ -97,11 +99,17 @@ const PROJECTS: ProjectType[] = t("projects");
 
 					<p class="mt-2 text-gray-300 text-pretty">{description}</p>
 
-					<footer class="mt-4">
+					<footer class="flex items-end justify-start mt-4 gap-x-4">
 						{github && (
 							<LinkButton href={github}>
 								<GitHub class="size-6" />
 								Code
+							</LinkButton>
+						)}
+						{link && (
+							<LinkButton href={link}>
+								<Link class="size-4" />
+								Preview
 							</LinkButton>
 						)}
 					</footer>
