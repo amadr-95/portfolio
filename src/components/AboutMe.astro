@@ -11,13 +11,14 @@ const t = useTranslations(lang);
 <article
 	class="flex flex-col items-center justify-center gap-8 text-gray-300 md:flex-row"
 >
-	<div class="[&>p]:mb-4 [&>p>strong]:text-blue-300 [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+	<div class="[&>p]:mb-4 [&>p>strong]:text-blue-300 [&>p>strong]:font-mono [&>p>strong]:font-light text-pretty order-2 md:order-1"
         set:html={t('about.bio')}>
 	</div>
 	<Image
 		width={200}
 		height={200}
 		src="/images/me-professional.webp"
+		loading="eager"
 		alt={userData.name}
 		class="order-1 object-cover md:w-64 md:h-full p-1 md:order-2 rotate-3 lg:w-64 aspect-auto rounded-2xl ring-2 ring-white/20"
 	/>
