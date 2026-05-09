@@ -1,3 +1,6 @@
+const careerStartYear = 2024;
+const yearsOfExperience = new Date().getFullYear() - careerStartYear;
+
 export const languages = {
     en: {
         code: "en",
@@ -17,7 +20,7 @@ export const ui = {
     en: {
         "layout.title": "Amador's Portfolio - Software Engineer",
         "layout.description":
-            "Software engineer with 2+ years of experience in backend development, " +
+            `Software engineer with ${yearsOfExperience}+ years of experience in backend development, ` +
             "specialized in building efficient, maintainable, and production-grade solutions.",
         "navbar.experience": "Experience",
         "navbar.projects": "Projects",
@@ -27,7 +30,7 @@ export const ui = {
         "hero.rol": "Software Engineer",
         "hero.description": `
           Building efficient, maintainable backend solutions. 
-          I am a Software Engineer with 2+ years of experience shipping production-grade code using <strong>Java</strong>,
+          I am a Software Engineer with ${yearsOfExperience}+ years of experience shipping production-grade code using <strong>Java</strong>,
            <strong>Spring Boot</strong>, and <strong>AWS</strong>.
        `,
         "hero.contact": "Contact me",
@@ -107,7 +110,7 @@ export const ui = {
     es: {
         "layout.title": "Portfolio de Amador - Ingeniero de Software",
         "layout.description":
-            "Ingeniero de software con más de 2 años de experiencia en desarrollo backend, " +
+            `Ingeniero de software con más de ${yearsOfExperience} años de experiencia en desarrollo backend, ` +
             "especializado en construir soluciones eficientes, mantenibles y listas para producción.",
         "navbar.experience": "Experiencia",
         "navbar.projects": "Proyectos",
@@ -116,7 +119,7 @@ export const ui = {
         "hero.greet": "Hola, soy",
         "hero.rol": "Ingeniero de Software",
         "hero.description": `
-          Ingeniero de Software con más de 2 años de experiencia creando soluciones backend eficientes y mantenibles y llevando código a producción con <strong>Java</strong>,
+          Ingeniero de Software con más de ${yearsOfExperience} años de experiencia creando soluciones backend eficientes y mantenibles y llevando código a producción con <strong>Java</strong>,
            <strong>Spring Boot</strong> y <strong>AWS</strong>.
    `,
         "hero.contact": "Contáctame",
