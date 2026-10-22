@@ -25,7 +25,7 @@ export const ui = {
         "navbar.experience": "Experience",
         "navbar.projects": "Projects",
         "navbar.about-me": "About me",
-        "hero.badge": "Working at StubHub",
+        "hero.badge": "Working at StubHub International",
         "hero.greet": "Hey, I'm",
         "hero.rol": "Software Engineer",
         "hero.description": `
@@ -44,7 +44,7 @@ export const ui = {
                 title: "Software Engineer",
                 company: "StubHub International | Madrid, Spain (Remote)",
                 description:
-                    "Building and evolving the seller experience of StubHub, one of the world's largest ticket marketplaces. " +
+                    "Building and evolving the seller experience of StubHub International, one of the world's largest ticket marketplaces. " +
                     "Developing services with Java and Spring Boot on GCP, focused on reliability and scalability for a global audience.",
                 latest: true,
             },
@@ -107,7 +107,7 @@ export const ui = {
                <strong>millions of transactions</strong>.
            </p>
            <p>
-              Today I work remotely from Madrid as a Software Engineer at <strong>StubHub</strong>,
+              Today I work remotely from Madrid as a Software Engineer at <strong>StubHub International</strong>,
               one of the <strong>world's largest ticket marketplaces</strong>, building the services
               behind its seller experience with Java, Spring Boot, and GCP.
            </p>
@@ -128,7 +128,7 @@ export const ui = {
         "navbar.experience": "Experiencia",
         "navbar.projects": "Proyectos",
         "navbar.about-me": "Sobre mí",
-        "hero.badge": "Trabajando en StubHub",
+        "hero.badge": "Trabajando en StubHub International",
         "hero.greet": "Hola, soy",
         "hero.rol": "Ingeniero de Software",
         "hero.description": `
@@ -146,7 +146,7 @@ export const ui = {
                 title: "Software Engineer",
                 company: "StubHub International | Madrid, España (Remoto)",
                 description:
-                    "Desarrollo y evolución de la experiencia de vendedor de StubHub, uno de los mayores marketplaces de entradas del mundo. " +
+                    "Desarrollo y evolución de la experiencia de vendedor de StubHub International, uno de los mayores marketplaces de entradas del mundo. " +
                     "Construcción de servicios con Java y Spring Boot sobre GCP, con foco en la fiabilidad y la escalabilidad para una audiencia global.",
                 latest: true,
             },
@@ -208,7 +208,7 @@ export const ui = {
           donde contribuí al desarrollo y mantenimiento de una plataforma de pagos de alto volumen que procesa <strong>millones de transacciones</strong>.
        </p>
        <p>
-          Actualmente trabajo en remoto desde Madrid como Software Engineer en <strong>StubHub</strong>,
+          Actualmente trabajo en remoto desde Madrid como Software Engineer en <strong>StubHub International</strong>,
           uno de los <strong>mayores marketplaces de entradas del mundo</strong>, desarrollando los servicios
           que hay detrás de su experiencia de vendedor con Java, Spring Boot y GCP.
        </p>
