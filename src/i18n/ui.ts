@@ -25,13 +25,13 @@ export const ui = {
         "navbar.experience": "Experience",
         "navbar.projects": "Projects",
         "navbar.about-me": "About me",
-        "hero.badge": "Working at Zalando",
+        "hero.badge": "Working at StubHub",
         "hero.greet": "Hey, I'm",
         "hero.rol": "Software Engineer",
         "hero.description": `
           Building efficient, maintainable backend solutions. 
           I am a Software Engineer with ${yearsOfExperience}+ years of experience shipping production-grade code using <strong>Java</strong>,
-           <strong>Spring Boot</strong>, and <strong>AWS</strong>.
+           <strong>Spring Boot</strong>, <strong>AWS</strong>, and <strong>GCP</strong>.
        `,
         "hero.contact": "Contact me",
         "hero.resume": "Download CV",
@@ -40,13 +40,21 @@ export const ui = {
         "index.about": "About me",
         exp: [
             {
-                date: "August 2024 - Present",
+                date: "September 2026 - Present",
+                title: "Software Engineer",
+                company: "StubHub International | Madrid, Spain (Remote)",
+                description:
+                    "Building and evolving the seller experience of StubHub, one of the world's largest ticket marketplaces. " +
+                    "Developing services with Java and Spring Boot on GCP, focused on reliability and scalability for a global audience.",
+                latest: true,
+            },
+            {
+                date: "August 2024 - September 2026",
                 title: "Software Engineer",
                 company: "Zalando Payments GmbH | Dortmund, Germany",
                 description:
                     "Architecting high-volume payment systems for Europe's leading fashion retailer. " +
                     "Specializing in Java, Spring Boot, and AWS to deliver secure, scalable, and reliable financial infrastructure.",
-                latest: true,
             },
             {
                 date: "March 2023 - July 2023",
@@ -81,7 +89,7 @@ export const ui = {
                     "Linkshade allows users to create custom aliases, track real-time click analytics, and handle bulk operations. " +
                     "Securely architected with OAuth 2.0 (Google/GitHub), intelligent rate limiting, and containerized deployment.",
                 github: "https://github.com/amadr-95/linkshade",
-                link: "https://linksha.de",
+                link: "",
                 image: "/images/projects/linkshade.png",
                 tags: ["JAVA", "SPRING", "POSTGRE", "BOOTSTRAP"],
             },
@@ -93,10 +101,15 @@ export const ui = {
              It has been the best decision I have ever made</strong
           >.</p>
            <p>
-              I started my software career in Spain before relocating to Germany to join 
-              one of the <strong>largest companies in Europe</strong>. 
-              I contribute to the development and maintenance of a high-volume payments platform that powers
+              I started my software career in Spain before relocating to Germany to join
+              <strong>Zalando</strong>, one of the <strong>largest companies in Europe</strong>,
+              where I contributed to the development and maintenance of a high-volume payments platform that powers
                <strong>millions of transactions</strong>.
+           </p>
+           <p>
+              Today I work remotely from Madrid as a Software Engineer at <strong>StubHub</strong>,
+              one of the <strong>world's largest ticket marketplaces</strong>, building the services
+              behind its seller experience with Java, Spring Boot, and GCP.
            </p>
            <p>
               I stay up to date in the development community. In my spare time, I
@@ -115,12 +128,12 @@ export const ui = {
         "navbar.experience": "Experiencia",
         "navbar.projects": "Proyectos",
         "navbar.about-me": "Sobre mí",
-        "hero.badge": "Trabajando en Zalando",
+        "hero.badge": "Trabajando en StubHub",
         "hero.greet": "Hola, soy",
         "hero.rol": "Ingeniero de Software",
         "hero.description": `
           Ingeniero de Software con más de ${yearsOfExperience} años de experiencia creando soluciones backend eficientes y mantenibles y llevando código a producción con <strong>Java</strong>,
-           <strong>Spring Boot</strong> y <strong>AWS</strong>.
+           <strong>Spring Boot</strong>, <strong>AWS</strong> y <strong>GCP</strong>.
    `,
         "hero.contact": "Contáctame",
         "hero.resume": "Descargar CV",
@@ -129,13 +142,21 @@ export const ui = {
         "index.about": "Sobre mí",
         exp: [
             {
-                date: "Agosto 2024 - Presente",
+                date: "Septiembre 2026 - Presente",
+                title: "Software Engineer",
+                company: "StubHub International | Madrid, España (Remoto)",
+                description:
+                    "Desarrollo y evolución de la experiencia de vendedor de StubHub, uno de los mayores marketplaces de entradas del mundo. " +
+                    "Construcción de servicios con Java y Spring Boot sobre GCP, con foco en la fiabilidad y la escalabilidad para una audiencia global.",
+                latest: true,
+            },
+            {
+                date: "Agosto 2024 - Septiembre 2026",
                 title: "Software Engineer",
                 company: "Zalando Payments GmbH | Dortmund, Alemania",
                 description:
                     "Diseño de arquitectura de sistemas de pagos de alto volumen para el sector retail líder en Europa. " +
                     "Especializado en Java, Spring Boot y AWS para entregar infraestructura financiera segura, escalable y fiable.",
-                latest: true,
             },
             {
                 date: "Marzo 2023 - Julio 2023",
@@ -170,7 +191,7 @@ export const ui = {
                     "Linkshade permite crear alias personalizados, ver analíticas de clics en tiempo real y gestionar operaciones masivas. " +
                     "Arquitectura segura con OAuth 2.0 (Google/GitHub), rate limiting inteligente y despliegue contenerizado.",
                 github: "https://github.com/amadr-95/linkshade",
-                link: "https://linksha.de",
+                link: "",
                 image: "/images/projects/linkshade.png",
                 tags: ["JAVA", "SPRING", "POSTGRE", "BOOTSTRAP"],
             },
@@ -182,9 +203,14 @@ export const ui = {
          Ha sido la mejor decisión que he tomado jamás</strong
       >.</p>
        <p>
-          Comencé mi carrera como desarrollador en España antes de mudarme a Alemania para unirme a 
-          una de las <strong>empresas más grandes de Europa</strong>. 
-          Contribuyo al desarrollo y mantenimiento de una plataforma de pagos de alto volumen que procesa <strong>millones de transacciones</strong>.
+          Comencé mi carrera como desarrollador en España antes de mudarme a Alemania para unirme a
+          <strong>Zalando</strong>, una de las <strong>empresas más grandes de Europa</strong>,
+          donde contribuí al desarrollo y mantenimiento de una plataforma de pagos de alto volumen que procesa <strong>millones de transacciones</strong>.
+       </p>
+       <p>
+          Actualmente trabajo en remoto desde Madrid como Software Engineer en <strong>StubHub</strong>,
+          uno de los <strong>mayores marketplaces de entradas del mundo</strong>, desarrollando los servicios
+          que hay detrás de su experiencia de vendedor con Java, Spring Boot y GCP.
        </p>
        <p>
           Me mantengo al día en la comunidad de desarrollo. En mi tiempo libre,
